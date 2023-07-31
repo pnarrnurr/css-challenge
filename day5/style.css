@@ -1,0 +1,359 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background-color: #42A7A1;
+    border-radius: 2px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    width: 280px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    height: 60px;
+    background: #F1BA64;
+    color: #fff;
+}
+
+.card__header-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__header-left__title {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.card__header-left__date {
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.card__header-right {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+.card__header-right__type {
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.card__header-right__value {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card__body {
+    height: 160px;
+    padding: 10px;
+}
+
+.card__parameter {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 9px;
+    color: #606060;
+    line-height: 13px;
+    padding: 0 10px 0 25px;
+}
+
+.card__parameter-red {
+    position: relative;
+    display: flex;
+    padding: 0 20px 0 0;
+}
+
+.card__parameter-red::before {
+    position: relative;
+    left: -4px;
+    top: 7px;
+    display: block;
+    content: '';
+    width: 11px;
+    height: 3px;
+    border-radius: 3px;
+    background: #FA7373;
+}
+
+.card__parameter-blue {
+    position: relative;
+    display: flex;
+}
+
+.card__parameter-blue::before {
+    position: relative;
+    left: -4px;
+    top: 7px;
+    display: block;
+    content: '';
+    width: 11px;
+    height: 3px;
+    border-radius: 3px;
+    background: #7BA2FF;
+}
+
+.card-statistic {
+    position: relative;
+    height: 81px;
+    margin: 15px auto 0;
+}
+
+.line-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #F2F2F2;
+}
+
+.line-2 {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #F2F2F2;
+}
+
+.line-3 {
+    position: absolute;
+    top: inherit;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #F2F2F2;
+}
+
+.data-red svg,
+.data-blue svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.data-red svg polyline {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke: #FA7373;
+}
+
+.data-red .tooltip {
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translate3d(-50%, 10px, 0);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 11px;
+    color: #fff;
+    padding: 8px 6px;
+    border-radius: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+    background-color: #FA7373;
+}
+
+.data-red .tooltip::after {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 6px;
+    width: 6px;
+    left: 50%;
+    margin-left: -3px;
+    bottom: -3px;
+    transform: rotate(45deg);
+    background-color: #FA7373;
+}
+
+.data-red [class^="point-"] {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 10;
+    background-color: #FA7373;
+}
+
+.data-red [class^="point-"]:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+}
+
+.data-red .point-1 {
+    left: 7px;
+    top: 43px;
+}
+
+.data-red .point-2 {
+    left: 48px;
+    top: 9px;
+}
+
+.data-red .point-3 {
+    left: 88px;
+    top: 20px;
+}
+
+.data-red .point-4 {
+    left: 128px;
+    top: 8px;
+}
+
+.data-red .point-5 {
+    left: 169px;
+    top: 35px;
+}
+
+.data-red .point-6 {
+    left: 209px;
+    top: 45px;
+}
+
+.data-red .point-7 {
+    left: 249px;
+    top: 16px;
+}
+
+
+
+.data-blue svg polyline {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke: #7BA2FF;
+}
+
+
+.data-blue .tooltip {
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translate3d(-50%, 10px, 0);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 11px;
+    color: #fff;
+    padding: 8px 6px;
+    border-radius: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+    background-color: #7BA2FF;
+}
+
+.data-blue .tooltip::after {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 6px;
+    width: 6px;
+    left: 50%;
+    margin-left: -3px;
+    bottom: -3px;
+    transform: rotate(45deg);
+    background-color: #7BA2FF;
+}
+
+.data-blue [class^="point-"] {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 10;
+    background-color: #7BA2FF;
+}
+
+.data-blue [class^="point-"]:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+}
+
+.data-blue .point-1 {
+    left: 7px;
+    top: 58px;
+}
+
+.data-blue .point-2 {
+    left: 48px;
+    top: 47px;
+}
+
+.data-blue .point-3 {
+    left: 88px;
+    top: 62px;
+}
+
+.data-blue .point-4 {
+    left: 128px;
+    top: 52px;
+}
+
+.data-blue .point-5 {
+    left: 169px;
+    top: 58px;
+}
+
+.data-blue .point-6 {
+    left: 209px;
+    top: 71px;
+}
+
+.data-blue .point-7 {
+    left: 249px;
+    top: 61px;
+}
+
+.days {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.days .day {
+    width: (100% / 7);
+    font-size: 9px;
+    color: #949494;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
