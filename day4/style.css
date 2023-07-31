@@ -1,0 +1,91 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    color: #ffffff;
+    background-color: #E56262;
+    border-radius: 2px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.point-first {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    animation-fill-mode: both;
+    animation: animation-first 2s cubic-bezier(.21, .98, .6, .99) infinite alternate;
+}
+
+.point-second {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    animation-fill-mode: both;
+    animation: animation-second 2s cubic-bezier(.21, .98, .6, .99) infinite alternate;
+}
+
+.point-third {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    animation-fill-mode: both;
+    animation: animation-third 2s cubic-bezier(.21, .98, .6, .99) infinite alternate;
+}
+
+@keyframes animation-first {
+
+    0%,
+    10% {
+        box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+        transform: scale(0);
+    }
+
+    100% {
+        box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+        transform: scale(1);
+    }
+}
+
+@keyframes animation-second {
+
+    0%,
+    40% {
+        box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+        transform: scale(0);
+    }
+
+    100% {
+        box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+        transform: scale(1);
+    }
+}
+
+@keyframes animation-third {
+
+    0%,
+    70% {
+        box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+        transform: scale(0);
+    }
+
+    100% {
+        box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+        transform: scale(1);
+    }
+}
