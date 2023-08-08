@@ -22,6 +22,11 @@
     overflow: hidden;
 }
 
+.shoe-area {
+    animation: fade-in 0.8s ease-out 1s;
+    animation-fill-mode: both;
+}
+
 .bg-light {
     position: relative;
     bottom: 0;
